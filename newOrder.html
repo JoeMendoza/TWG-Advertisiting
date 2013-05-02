@@ -1,0 +1,59 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="toggle-switch.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css3-checkboxes-and-radios.css">
+	<link rel="stylesheet" href="forms.css">
+	<link rel="stylesheet" href="reveal.css">
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<![endif]-->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.reveal.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.scrollUp.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> <!-- TODO: Upload Local , datepicker, titletag-->
+
+	<title>Available Records</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="headerLogoCol">
+				<img src="assets/images/twgLogoTemp.png" alt="TWG Advertising Logo" class="twgLogo" />
+			</div> <!-- /headerLogoCol -->
+			<div class="headerTopRow">
+				<nav class="profileMenu">
+					<ul>
+						<li><span class="adminID">Welcome, User!</span>
+							<ul>
+								<li><a href="#"><span class="myAccount">My Account</span></a></li>
+								<li><a href="#"><span class="logOut">Log Out</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div> <!-- headerTopRow -->
+			<div class="headerCol1"></div> <!-- /headerCol1 -->
+			<div class="headerCol2"></div> <!-- /headerCol2 -->
+			<div class="headerCol3"></div> <!-- /headerCol3 -->
+		</header>
+		<div class="mainContent">
+			<h1>Create New Order</h1>
+			<form class="newOrder">
+				<label>Job ID</label><span class="autoJobID">2013-####</span>
+				<label>In-house Date</label><input id="datepicker" />
+				<label>Client Name</label><input id="clientName" type="text" placeholder="Client Name" title="Client Name">
+				<label>Upload CIS Data</label><input type="file" name="cisData">
+				<label>Upload AccuData</label><input type="file" name="accuData">
+				<div class="floatRight"><a href="landingpage.html" style="margin-right: 10px;">Cancel</a> <!-- TODO: Remove inline -->
+			<a href="recordselection.html" class="submitBtn">Start</a></div>
+			</form>
+			
+		</div> <!-- /.mainContent -->
+		<script src="assets/js/scripts.js"></script>
+	</body>
+</html>

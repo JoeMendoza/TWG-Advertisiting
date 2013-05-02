@@ -1,0 +1,642 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="toggle-switch.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css3-checkboxes-and-radios.css">
+	<link rel="stylesheet" href="forms.css">
+	<link rel="stylesheet" href="reveal.css">
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<![endif]-->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.reveal.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.sticky-div.js"></script>
+	<script src="assets/js/jquery.scrollUp.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> <!-- TODO: Upload Local , datepicker, titletag-->
+
+	<title>Records Selection Page</title>
+</head>
+
+<body>
+	<div class="pageWrap">
+		<header>
+			<h1 class="twgLogo">twg advertising</h1>
+			<nav class="profileMenu">
+				<ul>
+					<li id="adminTrigger"><span class="adminID">Welcome, User!</span>
+						<ul id="adminToggle">
+							<li><a href="#"><span class="adminSettings">Settings</span></a></li>
+							<li><a href="#"><span class="logOut">Log Out</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div> <!-- /pageWrap -->
+	<div class="mainContent">
+		<div id="stickySelection">
+			<div class="selectionTopRow">
+				<div class="switch candy orange" style="width: 45%; margin-bottom: 15px; float: left;"> <!-- TODO: Remove inline -->
+					<input id="filtered" name="view" type="radio" checked>
+						<label for="filtered" onclick="">Filtered List</label>
+					<input id="saturation" name="view" type="radio">	
+						<label for="saturation" onclick="">Saturation List</label>
+					<span class="slide-button"></span>
+				</div>
+				<div class="selectionDate">
+					<p>In-home Date: <input class="datepicker" /></p>
+					<p>End Date: <em>4/16/2013</em></p>
+				</div> <!-- /selectionDate -->
+			</div> <!-- selectionTopRow -->
+			<div class="selectionBottomRow">
+				<div class="bottomRow1">
+					<p class="recordCount">Available Records: <span class="totalRecords">5740</span><br>Selected Records: <span class="totalRecords">1660</span></p>
+				</div>
+				<div class="bottomRow2">
+					<!-- CheckBoxes -->
+					<ul class="colorSelectors css3-checkboxes">
+						<li>
+							<label>
+								<input type="checkbox" name="selectAll" />
+								<span>Select All</span>
+							</label>
+						</li>
+						<li class="css3-checkbox-green">
+							<label>
+								<input type="checkbox" checked="checked" name="allGreen" />
+								<span>All Green</span>
+							</label>
+							<ul>
+								<li>Available: 102</li>
+								<li>Selected: 102</li>
+							</ul>
+						</li>
+						<li class="css3-checkbox-blue">
+							<label>
+								<input type="checkbox" name="allBlue" />
+								<span>All Blue</span>
+							</label>
+							<ul>
+								<li>Available: 500</li>
+								<li>Selected: 12</li>
+							</ul>
+						</li>
+						<li class="css3-checkbox-orange">
+							<label>
+								<input type="checkbox" name="allOrange" />
+								<span>All Orange</span>
+							</label>
+							<ul>
+								<li>Available: 450</li>
+								<li>Selected: 12</li>
+							</ul>
+						</li>
+						<li class="css3-checkbox-red">
+							<label>
+								<input type="checkbox" name="allRed" />
+								<span>All Red</span>
+							</label>
+							<ul>
+								<li>Available: 45</li>
+								<li>Selected: 12</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="bottomRow3">
+					<a href="landinPage.html" class="cancelBtn">Cancel</a>
+					<a href="#" class="submitBtn" data-reveal-id="forgotPassword">Save</a>
+				</div>
+			</div> <!-- /selectionBottomRow -->
+				
+		</div>
+		<h1>Records Available for Client Name ####-#### (Filtered)</h1>
+		<table id="items" border="0" cellpadding="1" cellspacing="1">
+			<tr>
+				<th>Select</th>
+				<th>Available Records</th>
+				<th>ResOcc</th>
+				<th>Zip</th>
+				<th>Route</th>
+				<th>City</th>
+				<th>County</th>
+				<th>State</th>
+				<th>Income</th>
+				<th>Age</th>
+				<th>Ethnicity</th>
+				<th>HWC</th>
+				<th>Last Week</th>
+				<th>Two Weeks Ago</th>
+				<th>Three Weeks Ago</th>
+				<th>Four Weeks Ago</th>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td class="unavailable">####-####</td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="always">
+				<td class="unavailable">####-####</td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="sometimes">
+				<td class="unavailable">####-####</td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="sometimes">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="sometimes">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="sometimes">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="sometimes">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="almostNever">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="almostNever">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="almostNever">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+			<tr class="never">
+				<td><input type="checkbox"></td>
+				<td>##</td>
+				<td>##</td>
+				<td>#####</td>
+				<td>####</td>
+				<td>City</td>
+				<td>County</td>
+				<td>ST</td><td>40k</td><td>52</td><td>Hisp</td><td>###</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+				<td>Client Name <br><span class="displayListJobNum">2013-####</span>##</td>
+			</tr>
+		</table>
+	</div> <!-- /.mainContent -->
+	<script src="assets/js/scripts.js"></script>
+	<div id="forgotPassword" class="reveal-modal">
+		<h1>Are you finished with this job order?</h1>
+		<ul>
+			<li><a href="#" class="submitBtn">Download CSV</a></li>
+			<li><a href="#" class="submitBtn">Print CSV</a></li>
+			<li><a href="#" class="submitBtn">Append To Job</a></li>
+		</ul>
+		<a href="landingPage.html" class="floatRight">Yes, I'm Finished</a>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+</body>
+</html>

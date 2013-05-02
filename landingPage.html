@@ -1,0 +1,149 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="toggle-switch.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css3-checkboxes-and-radios.css">
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="forms.css">
+	<link rel="stylesheet" href="reveal.css">
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<![endif]-->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.reveal.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.scrollUp.min.js"></script>
+	<script src="assets/js/jquery.sticky-div.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> <!-- TODO: Upload Local , datepicker, titletag-->
+
+	<title>TWG Advertising</title>
+</head>
+<body>
+	<div class="pageWrap">
+		<header>
+			<h1 class="twgLogo">twg advertising</h1>
+			<nav class="profileMenu">
+				<ul>
+					<li id="adminTrigger"><span class="adminID">Welcome, User!</span>
+						<ul id="adminToggle">
+							<li><a href="#"><span class="adminSettings">Settings</span></a></li>
+							<li><a href="#"><span class="logOut">Log Out</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div> <!-- /pageWrap -->
+	<div class="mainContent">
+		<div class="landingPageCols">
+			<div class="landingPageCol1">
+				<h1>Upload New Job</h1>
+				<form class="newOrder">
+					<label>Job #</label><input id="jobID" type="text" placeholder="####-####" title="Job ID">
+					<label>Client Name</label><input id="clientName" type="text" placeholder="Client Name" title="Client Name">
+					<label>In-house Date</label><input class="datepicker" />
+					<label>Upload CIS Data</label><input type="file" name="cisData">
+					<label>Upload AccuData</label><input type="file" name="accuData">
+					<div class="clear"></div>
+					<div class="floatRight">
+						<a href="recordselection.html" class="submitBtn">Start</a>
+					</div>
+				</form>
+			</div>
+			<div class="landingPageCol2">
+				<h1>Duplicate Job</h1>
+				<form class="newOrder">
+					<label>Original Job #</label><input id="oldJobID" type="text" placeholder="####-####" title="Old Job ID">
+					<label>New Job #</label><input id="jobID" type="text" placeholder="####-####" title="New Job ID">	
+					<label>New Client Name</label><input id="clientName" type="text" placeholder="Client Name" title="Client Name">
+					<label>In-house Date</label><input class="datepicker" />
+					<div class="floatRight">
+						<a href="recordselection.html" class="submitBtn">Start</a>
+					</div>
+				</form>
+			</div>
+			<div class="landingPageCol3">
+				<h1>Append Job</h1>
+				<form class="newOrder">
+					<label>Original Job #</label><input id="oldJobID" type="text" placeholder="####-####" title="Old Job ID">
+					<label>Upload CIS Data</label><input type="file" name="cisData">
+					<label>Upload AccuData</label><input type="file" name="accuData">
+					<div class="floatRight">
+						<a href="recordselection.html" class="submitBtn">Start</a>
+					</div>
+				</form>
+			</div>
+		</div> <!-- /landingPageCols -->
+		<div class="search">
+			<h1>Search</h1>
+			<form class="searchForm">
+				<a href="#" class="floatRight submitBtn searchBtn">Search</a>
+				<div class="searchCol1">
+					<label>Job #</label><input id="oldJobID" type="text" placeholder="####-####" title="Old Job ID">
+				</div>
+				<div class="searchCol2">
+					Begin Date <input class="datepicker2" /> 
+					End Date <input class="datepicker2" />
+				</div>
+				<div class="searchCol3">
+					<label>New Client Name</label><input id="clientName" type="text" placeholder="Client Name" title="Client Name">
+				</div>
+				<div class="searchCol4">
+					<label>Sales Associate</label><input id="sales" type="text" placeholder="Sales Associate" title="Sales Associate">
+				</div>
+			</form>
+		</div>
+		<h1>Pending Orders</h1>
+		<table id="items" border="0" cellpadding="1" cellspacing="1">
+			<tr>
+				<th>Actions</th>
+				<th>Job ID</th>
+				<th>Records in Order</th>
+				<th>In-house Date</th>
+				<th>End Date</th>
+				<th>Client</th>
+			</tr>
+			<tr class="processedOrder">
+				<td>
+					<img src="assets/images/iconPrint.png" alt="view icon"  title="Print Order"/>
+					<img src="assets/images/iconDoc.png" alt="doc icon"  title="Save CSV"/>
+					<img src="assets/images/iconEdit.png" alt="edit icon"  title="Edit CSV"/>
+				</td>
+				<td>2013-405</td>
+				<td>1700</td>
+				<td>May 5, 2013</td>
+				<td>May 12, 2013</td>
+				<td>Client Name</td>
+			</tr>
+			<tr class="processedOrder">
+				<td>
+					<img src="assets/images/iconPrint.png" alt="view icon"  title="Print Order"/>
+					<img src="assets/images/iconDoc.png" alt="doc icon"  title="Save CSV"/>
+					<img src="assets/images/iconEdit.png" alt="edit icon"  title="Edit CSV"/>
+				</td>
+				<td>2013-4051</td>
+				<td>1700</td>
+				<td>May 5, 2013</td>
+				<td>May 12, 2013</td>
+				<td>Client Name</td>
+			</tr>
+			<tr class="processedOrder">
+				<td>
+					<img src="assets/images/iconPrint.png" alt="view icon"  title="Print Order"/>
+					<img src="assets/images/iconDoc.png" alt="doc icon"  title="Save CSV"/>
+					<img src="assets/images/iconEdit.png" alt="edit icon"  title="Edit CSV"/>
+				</td>
+				<td>2013-4052</td>
+				<td>1700</td>
+				<td>May 5, 2013</td>
+				<td>May 12, 2013</td>
+				<td>Client Name</td>
+			</tr>
+		</table>
+	</div> <!-- /.mainContent -->
+	<script src="assets/js/scripts.js"></script>
+</body>
+</html>
